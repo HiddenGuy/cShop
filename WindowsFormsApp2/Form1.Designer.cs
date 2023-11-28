@@ -29,37 +29,59 @@
         private void InitializeComponent()
         {
             this.TimeTable = new System.Windows.Forms.DataGridView();
+            this.PlusButton = new System.Windows.Forms.Button();
+            this.TextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TimeTable)).BeginInit();
             this.SuspendLayout();
             // 
             // TimeTable
             // 
-            this.TimeTable.ColumnHeadersHeight = 46;
-            this.TimeTable.Location = new System.Drawing.Point(19, 32);
-            this.TimeTable.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TimeTable.Location = new System.Drawing.Point(10, 16);
             this.TimeTable.Name = "TimeTable";
-            this.TimeTable.RowHeadersWidth = 82;
             this.TimeTable.RowTemplate.Height = 23;
-            this.TimeTable.Size = new System.Drawing.Size(1766, 802);
+            this.TimeTable.Size = new System.Drawing.Size(951, 401);
             this.TimeTable.TabIndex = 0;
+            // 
+            // PlusButton
+            // 
+            this.PlusButton.Location = new System.Drawing.Point(500, 438);
+            this.PlusButton.Name = "PlusButton";
+            this.PlusButton.Size = new System.Drawing.Size(124, 47);
+            this.PlusButton.TabIndex = 1;
+            this.PlusButton.Text = "추가";
+            this.PlusButton.UseVisualStyleBackColor = true;
+            this.PlusButton.Click += new System.EventHandler(this.PlusButton_Click);
+            // 
+            // TextBox
+            // 
+            this.TextBox.Location = new System.Drawing.Point(368, 452);
+            this.TextBox.Name = "TextBox";
+            this.TextBox.Size = new System.Drawing.Size(116, 21);
+            this.TextBox.TabIndex = 2;
+            this.TextBox.Text = "입력";
+            this.TextBox.Click += new System.EventHandler(this.TextBox_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1807, 1014);
+            this.ClientSize = new System.Drawing.Size(973, 507);
+            this.Controls.Add(this.TextBox);
+            this.Controls.Add(this.PlusButton);
             this.Controls.Add(this.TimeTable);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.TimeTable)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView TimeTable;
+        private System.Windows.Forms.Button PlusButton;
+        private System.Windows.Forms.TextBox TextBox;
     }
 }
 

@@ -46,7 +46,8 @@ namespace WindowsFormsApp2
             // DataGridView 셀 클릭 이벤트 추가
             TimeTable.CellClick += TimeTable_CellClick;
 
-
+            // 변경 버튼 클릭 이벤트 추가
+            PlusButton.Click += PlusButton_Click;
         }
 
         private void TimeTable_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -56,13 +57,30 @@ namespace WindowsFormsApp2
                 selectedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex];
             }
         }
+
+        private void PlusButton_Click(object sender, EventArgs e)
+        {
+            if (selectedCell != null)
+            {
+                string newContent = TextBox.Text.Trim(); // 변경할 새로운 내용
+
+                // 선택된 셀의 내용 변경
+                selectedCell.Value = newContent;
+            }
+            else
+            {
+                MessageBox.Show("셀을 먼저 선택하세요.");
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TextBox_Click(object sender, EventArgs e)
+        {
+            TextBox.Text = string.Empty;
+        }
     }
 }
-
-
-
-
-
-
-
-
