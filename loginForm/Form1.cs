@@ -103,6 +103,11 @@ namespace 윈도우프로그래밍_프로젝트
         }
 
 
-        
+        private void Linklabel5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Linklabel5_Click 호출됨");
+            FindUsernameForm findUsernameForm = new FindUsernameForm();
+            findUsernameForm.ShowDialog();
+        }
     }
 }
