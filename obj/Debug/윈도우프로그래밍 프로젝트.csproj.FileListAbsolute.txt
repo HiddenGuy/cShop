@@ -34,3 +34,15 @@ C:\Users\user\Desktop\로그인+시가표\obj\Debug\윈도우프로그래밍 프
 C:\Users\user\Desktop\로그인+시가표\obj\Debug\윈도우프로그래밍 프로젝트.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\로그인+시가표\obj\Debug\윈도우프로그래밍 프로젝트.exe
 C:\Users\user\Desktop\로그인+시가표\obj\Debug\윈도우프로그래밍 프로젝트.pdb
+C:\Users\jmhm0\Desktop\과제\openFinal\bin\Debug\윈도우프로그래밍 프로젝트.exe.config
+C:\Users\jmhm0\Desktop\과제\openFinal\bin\Debug\윈도우프로그래밍 프로젝트.exe
+C:\Users\jmhm0\Desktop\과제\openFinal\bin\Debug\윈도우프로그래밍 프로젝트.pdb
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍 프로젝트.csproj.AssemblyReference.cache
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍_프로젝트.FindUsernameForm.resources
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍_프로젝트.Form1.resources
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍_프로젝트.Form2.resources
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍_프로젝트.Properties.Resources.resources
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍 프로젝트.csproj.GenerateResource.cache
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍 프로젝트.csproj.CoreCompileInputs.cache
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍 프로젝트.exe
+C:\Users\jmhm0\Desktop\과제\openFinal\obj\Debug\윈도우프로그래밍 프로젝트.pdb
