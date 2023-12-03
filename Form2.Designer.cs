@@ -35,8 +35,6 @@
             this.secondGrade = new System.Windows.Forms.ComboBox();
             this.thirdGrade = new System.Windows.Forms.ComboBox();
             this.color = new System.Windows.Forms.ComboBox();
-            this.plusButton = new System.Windows.Forms.Button();
-            this.inputBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TimeTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +42,7 @@
             // 
             this.TimeTable.ColumnHeadersHeight = 46;
             this.TimeTable.Location = new System.Drawing.Point(26, -2);
-            this.TimeTable.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TimeTable.Margin = new System.Windows.Forms.Padding(6);
             this.TimeTable.Name = "TimeTable";
             this.TimeTable.RowHeadersWidth = 82;
             this.TimeTable.RowTemplate.Height = 23;
@@ -61,7 +59,7 @@
             "third",
             "fourth"});
             this.grade.Location = new System.Drawing.Point(35, 1340);
-            this.grade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grade.Margin = new System.Windows.Forms.Padding(6);
             this.grade.Name = "grade";
             this.grade.Size = new System.Drawing.Size(164, 32);
             this.grade.TabIndex = 5;
@@ -75,7 +73,7 @@
             "병신같은 과목",
             "원어민 외국어"});
             this.firstGrade.Location = new System.Drawing.Point(262, 1340);
-            this.firstGrade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.firstGrade.Margin = new System.Windows.Forms.Padding(6);
             this.firstGrade.Name = "firstGrade";
             this.firstGrade.Size = new System.Drawing.Size(173, 32);
             this.firstGrade.TabIndex = 6;
@@ -90,7 +88,7 @@
             "해야지",
             "이런"});
             this.fourthGrade.Location = new System.Drawing.Point(262, 1340);
-            this.fourthGrade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fourthGrade.Margin = new System.Windows.Forms.Padding(6);
             this.fourthGrade.Name = "fourthGrade";
             this.fourthGrade.Size = new System.Drawing.Size(173, 32);
             this.fourthGrade.TabIndex = 7;
@@ -103,7 +101,7 @@
             "2학년과목",
             "고급프로그래밍"});
             this.secondGrade.Location = new System.Drawing.Point(262, 1340);
-            this.secondGrade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.secondGrade.Margin = new System.Windows.Forms.Padding(6);
             this.secondGrade.Name = "secondGrade";
             this.secondGrade.Size = new System.Drawing.Size(173, 32);
             this.secondGrade.TabIndex = 8;
@@ -118,7 +116,7 @@
             "빵상",
             "데이터베이스"});
             this.thirdGrade.Location = new System.Drawing.Point(262, 1340);
-            this.thirdGrade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.thirdGrade.Margin = new System.Windows.Forms.Padding(6);
             this.thirdGrade.Name = "thirdGrade";
             this.thirdGrade.Size = new System.Drawing.Size(173, 32);
             this.thirdGrade.TabIndex = 9;
@@ -130,37 +128,22 @@
             this.color.Items.AddRange(new object[] {
             "lightBlue",
             "pink",
-            "yellow"});
+            "yellow",
+            "blue",
+            "white",
+            "gray"});
             this.color.Location = new System.Drawing.Point(956, 1394);
-            this.color.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.color.Margin = new System.Windows.Forms.Padding(6);
             this.color.Name = "color";
             this.color.Size = new System.Drawing.Size(182, 32);
             this.color.TabIndex = 11;
             this.color.SelectedIndexChanged += new System.EventHandler(this.color_SelectedIndexChanged);
-            // 
-            // plusButton
-            // 
-            this.plusButton.Location = new System.Drawing.Point(604, 1352);
-            this.plusButton.Name = "plusButton";
-            this.plusButton.Size = new System.Drawing.Size(216, 47);
-            this.plusButton.TabIndex = 12;
-            this.plusButton.Text = "추가";
-            this.plusButton.UseVisualStyleBackColor = true;
-            // 
-            // inputBox
-            // 
-            this.inputBox.Location = new System.Drawing.Point(623, 1435);
-            this.inputBox.Name = "inputBox";
-            this.inputBox.Size = new System.Drawing.Size(197, 35);
-            this.inputBox.TabIndex = 13;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 1502);
-            this.Controls.Add(this.inputBox);
-            this.Controls.Add(this.plusButton);
             this.Controls.Add(this.color);
             this.Controls.Add(this.thirdGrade);
             this.Controls.Add(this.secondGrade);
@@ -168,12 +151,11 @@
             this.Controls.Add(this.firstGrade);
             this.Controls.Add(this.grade);
             this.Controls.Add(this.TimeTable);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.TimeTable)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -186,7 +168,5 @@
         private System.Windows.Forms.ComboBox secondGrade;
         private System.Windows.Forms.ComboBox thirdGrade;
         private System.Windows.Forms.ComboBox color;
-        private System.Windows.Forms.Button plusButton;
-        private System.Windows.Forms.TextBox inputBox;
     }
 }

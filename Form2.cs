@@ -222,6 +222,12 @@ namespace 윈도우프로그래밍_프로젝트
                 TimeTable.DefaultCellStyle.BackColor = Color.Pink;
             if (selectedColor == "yellow")
                 TimeTable.DefaultCellStyle.BackColor = Color.LightGoldenrodYellow;
+            if (selectedColor == "blue")
+                TimeTable.DefaultCellStyle.BackColor = Color.Blue;
+            if (selectedColor == "white")
+                TimeTable.DefaultCellStyle.BackColor = Color.White;
+            if (selectedColor == "gray")
+                TimeTable.DefaultCellStyle.BackColor = Color.Gray;
         }
     }
 }
