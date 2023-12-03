@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace 윈도우프로그래밍_프로젝트
 {
     public partial class Form2 : Form
-    {
+    {   
         DataGridViewCell selectedCell; //datagridviewcell <- 이게 표임
         public Form2()
         {
@@ -72,7 +72,6 @@ namespace 윈도우프로그래밍_프로젝트
         {
             if (selectedCell != null) //셀 선택 됐을떄만 실행
             {
-
                 string newContent = TextBox.Text.Trim(); // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
 
                 // newcontent << textbox 내용
@@ -89,112 +88,9 @@ namespace 윈도우프로그래밍_프로젝트
 
         }
 
-        private void grade_SelectedIndexChanged(object sender, EventArgs e)
+        private void TextBox_Click(object sender, EventArgs e)
         {
-            string selectedItem = grade.SelectedItem.ToString();
-            if (selectedItem == "first")
-            {
-                firstGrade.Visible = true;
-            }
-            else
-            {
-                firstGrade.Visible = false;
-            }
-
-            if (selectedItem == "second")
-            {
-                secondGrade.Visible = true;
-            }
-            else
-            {
-                secondGrade.Visible = false;
-            }
-
-            if (selectedItem == "third")
-            {
-                thirdGrade.Visible = true;
-            }
-            else
-            {
-                thirdGrade.Visible = false;
-            }
-            if (selectedItem == "fourth")
-            {
-                fourthGrade.Visible = true;
-            }
-            else
-            {
-                fourthGrade.Visible = false;
-            }
-
-        }
-
-        private void secondGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string inputItem = secondGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
-            {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
-            }
-            else
-            {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
-            }
-        }
-
-        private void firstGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string inputItem = firstGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
-            {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
-            }
-            else
-            {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
-            }
-        }
-
-        private void thirdGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string inputItem = thirdGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
-            {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
-            }
-            else
-            {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
-            }
-        }
-
-        private void fourthGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string inputItem = fourthGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
-            {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
-            }
-            else
-            {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
-            }
+            TextBox.Text = string.Empty; //텍스트박스에 입력 누르면 바로 지워지게
         }
     }
 }
