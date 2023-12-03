@@ -65,7 +65,7 @@ namespace 윈도우프로그래밍_프로젝트
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            if (username == "soneojin" && password == "everest@10")
+            if (username == "123" && password == "123")
             {
                 ShowTimetableForm();
             }
