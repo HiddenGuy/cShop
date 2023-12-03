@@ -34,6 +34,7 @@
             this.fourthGrade = new System.Windows.Forms.ComboBox();
             this.secondGrade = new System.Windows.Forms.ComboBox();
             this.thirdGrade = new System.Windows.Forms.ComboBox();
+            this.color = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.TimeTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,11 +116,25 @@
             this.thirdGrade.TabIndex = 9;
             this.thirdGrade.Visible = false;
             // 
+            // color
+            // 
+            this.color.FormattingEnabled = true;
+            this.color.Items.AddRange(new object[] {
+            "lightBlue",
+            "pink",
+            "yellow"});
+            this.color.Location = new System.Drawing.Point(515, 697);
+            this.color.Name = "color";
+            this.color.Size = new System.Drawing.Size(100, 20);
+            this.color.TabIndex = 11;
+            this.color.SelectedIndexChanged += new System.EventHandler(this.color_SelectedIndexChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 751);
+            this.Controls.Add(this.color);
             this.Controls.Add(this.thirdGrade);
             this.Controls.Add(this.secondGrade);
             this.Controls.Add(this.fourthGrade);
@@ -142,5 +157,6 @@
         private System.Windows.Forms.ComboBox fourthGrade;
         private System.Windows.Forms.ComboBox secondGrade;
         private System.Windows.Forms.ComboBox thirdGrade;
+        private System.Windows.Forms.ComboBox color;
     }
 }

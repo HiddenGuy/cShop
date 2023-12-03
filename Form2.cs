@@ -211,6 +211,18 @@ namespace 윈도우프로그래밍_프로젝트
                 }
             }
         }
+        private void color_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedColor = color.SelectedItem.ToString();
+            if (selectedColor == "lightBlue")
+            {
+                TimeTable.DefaultCellStyle.BackColor = Color.LightBlue;
+            }
+            if (selectedColor == "pink")
+                TimeTable.DefaultCellStyle.BackColor = Color.Pink;
+            if (selectedColor == "yellow")
+                TimeTable.DefaultCellStyle.BackColor = Color.LightGoldenrodYellow;
+        }
     }
 }
 
