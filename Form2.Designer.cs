@@ -158,7 +158,7 @@
             "blue",
             "white",
             "gray"});
-            this.color.Location = new System.Drawing.Point(515, 697);
+            this.color.Location = new System.Drawing.Point(514, 670);
             this.color.Name = "color";
             this.color.Size = new System.Drawing.Size(100, 20);
             this.color.TabIndex = 11;
