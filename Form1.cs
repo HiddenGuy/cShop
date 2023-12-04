@@ -87,27 +87,10 @@ namespace 윈도우프로그래밍_프로젝트
         {
 
         }
-        private void Linklabel4_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.google.co.kr");
-        }
-
-        private void Linklabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           System.Diagnostics.Process.Start("http://www.google.co.kr");
-        }
-
-        private void Linklabel2_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
 
-        private void Linklabel5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Linklabel5_Click 호출됨");
-            FindUsernameForm findUsernameForm = new FindUsernameForm();
-            findUsernameForm.ShowDialog();
-        }
+        
+        
     }
 }
