@@ -80,7 +80,7 @@ namespace 윈도우프로그래밍_프로젝트
         private void grade_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedItem = grade.SelectedItem.ToString();
-            if (selectedItem == "first")
+            if (selectedItem == "1학년")
             {
                 firstGrade.Visible = true;
             }
@@ -89,7 +89,7 @@ namespace 윈도우프로그래밍_프로젝트
                 firstGrade.Visible = false;
             }
 
-            if (selectedItem == "second")
+            if (selectedItem == "2학년")
             {
                 secondGrade.Visible = true;
             }
@@ -98,7 +98,7 @@ namespace 윈도우프로그래밍_프로젝트
                 secondGrade.Visible = false;
             }
 
-            if (selectedItem == "third")
+            if (selectedItem == "3학년")
             {
                 thirdGrade.Visible = true;
             }
@@ -106,7 +106,7 @@ namespace 윈도우프로그래밍_프로젝트
             {
                 thirdGrade.Visible = false;
             }
-            if (selectedItem == "fourth")
+            if (selectedItem == "4학년")
             {
                 fourthGrade.Visible = true;
             }
