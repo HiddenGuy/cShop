@@ -41,14 +41,14 @@
             // TimeTable
             // 
             this.TimeTable.ColumnHeadersHeight = 46;
-            this.TimeTable.Location = new System.Drawing.Point(26, -2);
-            this.TimeTable.Margin = new System.Windows.Forms.Padding(6);
+            this.TimeTable.Location = new System.Drawing.Point(14, -1);
             this.TimeTable.Name = "TimeTable";
             this.TimeTable.RowHeadersWidth = 82;
             this.TimeTable.RowTemplate.Height = 23;
-            this.TimeTable.Size = new System.Drawing.Size(1252, 1330);
+            this.TimeTable.Size = new System.Drawing.Size(674, 665);
             this.TimeTable.TabIndex = 1;
             this.TimeTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TimeTable_CellClick_1);
+            this.TimeTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.TimeTable_CellValueChanged);
             // 
             // grade
             // 
@@ -58,10 +58,9 @@
             "second",
             "third",
             "fourth"});
-            this.grade.Location = new System.Drawing.Point(35, 1340);
-            this.grade.Margin = new System.Windows.Forms.Padding(6);
+            this.grade.Location = new System.Drawing.Point(19, 670);
             this.grade.Name = "grade";
-            this.grade.Size = new System.Drawing.Size(164, 32);
+            this.grade.Size = new System.Drawing.Size(90, 20);
             this.grade.TabIndex = 5;
             this.grade.SelectedIndexChanged += new System.EventHandler(this.grade_SelectedIndexChanged);
             // 
@@ -72,10 +71,9 @@
             "C언어 기초",
             "병신같은 과목",
             "원어민 외국어"});
-            this.firstGrade.Location = new System.Drawing.Point(262, 1340);
-            this.firstGrade.Margin = new System.Windows.Forms.Padding(6);
+            this.firstGrade.Location = new System.Drawing.Point(141, 670);
             this.firstGrade.Name = "firstGrade";
-            this.firstGrade.Size = new System.Drawing.Size(173, 32);
+            this.firstGrade.Size = new System.Drawing.Size(95, 20);
             this.firstGrade.TabIndex = 6;
             this.firstGrade.Visible = false;
             this.firstGrade.SelectedIndexChanged += new System.EventHandler(this.firstGrade_SelectedIndexChanged);
@@ -87,10 +85,9 @@
             "취업",
             "해야지",
             "이런"});
-            this.fourthGrade.Location = new System.Drawing.Point(262, 1340);
-            this.fourthGrade.Margin = new System.Windows.Forms.Padding(6);
+            this.fourthGrade.Location = new System.Drawing.Point(141, 670);
             this.fourthGrade.Name = "fourthGrade";
-            this.fourthGrade.Size = new System.Drawing.Size(173, 32);
+            this.fourthGrade.Size = new System.Drawing.Size(95, 20);
             this.fourthGrade.TabIndex = 7;
             this.fourthGrade.Visible = false;
             // 
@@ -100,10 +97,9 @@
             this.secondGrade.Items.AddRange(new object[] {
             "2학년과목",
             "고급프로그래밍"});
-            this.secondGrade.Location = new System.Drawing.Point(262, 1340);
-            this.secondGrade.Margin = new System.Windows.Forms.Padding(6);
+            this.secondGrade.Location = new System.Drawing.Point(141, 670);
             this.secondGrade.Name = "secondGrade";
-            this.secondGrade.Size = new System.Drawing.Size(173, 32);
+            this.secondGrade.Size = new System.Drawing.Size(95, 20);
             this.secondGrade.TabIndex = 8;
             this.secondGrade.Visible = false;
             this.secondGrade.SelectedIndexChanged += new System.EventHandler(this.secondGrade_SelectedIndexChanged);
@@ -115,10 +111,9 @@
             "3학년과목1",
             "빵상",
             "데이터베이스"});
-            this.thirdGrade.Location = new System.Drawing.Point(262, 1340);
-            this.thirdGrade.Margin = new System.Windows.Forms.Padding(6);
+            this.thirdGrade.Location = new System.Drawing.Point(141, 670);
             this.thirdGrade.Name = "thirdGrade";
-            this.thirdGrade.Size = new System.Drawing.Size(173, 32);
+            this.thirdGrade.Size = new System.Drawing.Size(95, 20);
             this.thirdGrade.TabIndex = 9;
             this.thirdGrade.Visible = false;
             // 
@@ -132,18 +127,17 @@
             "blue",
             "white",
             "gray"});
-            this.color.Location = new System.Drawing.Point(956, 1394);
-            this.color.Margin = new System.Windows.Forms.Padding(6);
+            this.color.Location = new System.Drawing.Point(515, 697);
             this.color.Name = "color";
-            this.color.Size = new System.Drawing.Size(182, 32);
+            this.color.Size = new System.Drawing.Size(100, 20);
             this.color.TabIndex = 11;
             this.color.SelectedIndexChanged += new System.EventHandler(this.color_SelectedIndexChanged);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 1502);
+            this.ClientSize = new System.Drawing.Size(710, 780);
             this.Controls.Add(this.color);
             this.Controls.Add(this.thirdGrade);
             this.Controls.Add(this.secondGrade);
@@ -151,7 +145,7 @@
             this.Controls.Add(this.firstGrade);
             this.Controls.Add(this.grade);
             this.Controls.Add(this.TimeTable);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.TimeTable)).EndInit();

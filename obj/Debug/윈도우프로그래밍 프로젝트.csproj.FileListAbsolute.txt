@@ -58,3 +58,15 @@ C:\Users\user\Downloads\로그인+시가표+콤보+1행1열변경불가\로그�
 C:\Users\user\Downloads\로그인+시가표+콤보+1행1열변경불가\로그인+시가표+콤보\obj\Debug\윈도우프로그래밍 프로젝트.csproj.CoreCompileInputs.cache
 C:\Users\user\Downloads\로그인+시가표+콤보+1행1열변경불가\로그인+시가표+콤보\obj\Debug\윈도우프로그래밍 프로젝트.exe
 C:\Users\user\Downloads\로그인+시가표+콤보+1행1열변경불가\로그인+시가표+콤보\obj\Debug\윈도우프로그래밍 프로젝트.pdb
+C:\Users\Administrator\Desktop\cShop-main\bin\Debug\윈도우프로그래밍 프로젝트.exe.config
+C:\Users\Administrator\Desktop\cShop-main\bin\Debug\윈도우프로그래밍 프로젝트.exe
+C:\Users\Administrator\Desktop\cShop-main\bin\Debug\윈도우프로그래밍 프로젝트.pdb
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍 프로젝트.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍_프로젝트.FindUsernameForm.resources
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍_프로젝트.Form1.resources
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍_프로젝트.Form2.resources
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍_프로젝트.Properties.Resources.resources
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍 프로젝트.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍 프로젝트.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍 프로젝트.exe
+C:\Users\Administrator\Desktop\cShop-main\obj\Debug\윈도우프로그래밍 프로젝트.pdb

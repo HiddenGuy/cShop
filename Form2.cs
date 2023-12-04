@@ -184,7 +184,7 @@ namespace 윈도우프로그래밍_프로젝트
                 MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
             }
         }
-
+       /*
         private void TimeTable_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -211,6 +211,7 @@ namespace 윈도우프로그래밍_프로젝트
                 }
             }
         }
+        */
         private void color_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedColor = color.SelectedItem.ToString();
@@ -228,6 +229,36 @@ namespace 윈도우프로그래밍_프로젝트
                 TimeTable.DefaultCellStyle.BackColor = Color.White;
             if (selectedColor == "gray")
                 TimeTable.DefaultCellStyle.BackColor = Color.Gray;
+        }
+
+       
+        
+
+        private object selectedValue;
+
+        
+
+        private void TimeTable_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell clickedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                selectedValue = clickedCell.Value; // 클릭된 셀의 값을 selectedValue에 저장
+            }
+        }
+
+        private void TimeTable_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex == 0 || e.ColumnIndex == 0)
+            {
+                // 값이 변경된 셀이 아닌 경우 또는 이전과 동일한 값으로 변경된 경우에만 실행
+                if (selectedValue != null && !selectedValue.Equals(TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value))
+                {
+                    TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = selectedValue; // 이전 값으로 다시 설정
+                    MessageBox.Show("1행과 1열은 변경할 수 없습니다.");
+                }
+            }
         }
     }
 }
