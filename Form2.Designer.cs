@@ -39,26 +39,30 @@
             // TimeTable
             // 
             this.TimeTable.ColumnHeadersHeight = 46;
-            this.TimeTable.Location = new System.Drawing.Point(-9, 2);
+            this.TimeTable.Location = new System.Drawing.Point(-17, 4);
+            this.TimeTable.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TimeTable.Name = "TimeTable";
             this.TimeTable.RowHeadersWidth = 82;
             this.TimeTable.RowTemplate.Height = 23;
-            this.TimeTable.Size = new System.Drawing.Size(650, 654);
+            this.TimeTable.Size = new System.Drawing.Size(1207, 1308);
             this.TimeTable.TabIndex = 1;
+            this.TimeTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TimeTable_CellClick_1);
             // 
             // TextBox
             // 
-            this.TextBox.Location = new System.Drawing.Point(384, 676);
+            this.TextBox.Location = new System.Drawing.Point(713, 1352);
+            this.TextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(116, 21);
+            this.TextBox.Size = new System.Drawing.Size(212, 35);
             this.TextBox.TabIndex = 3;
             this.TextBox.Text = "입력";
             // 
             // PlusButton
             // 
-            this.PlusButton.Location = new System.Drawing.Point(517, 662);
+            this.PlusButton.Location = new System.Drawing.Point(960, 1324);
+            this.PlusButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.PlusButton.Name = "PlusButton";
-            this.PlusButton.Size = new System.Drawing.Size(124, 47);
+            this.PlusButton.Size = new System.Drawing.Size(230, 94);
             this.PlusButton.TabIndex = 4;
             this.PlusButton.Text = "추가";
             this.PlusButton.UseVisualStyleBackColor = true;
@@ -66,32 +70,34 @@
             // comboBoxGrade
             // 
             this.comboBoxGrade.FormattingEnabled = true;
-            this.comboBoxGrade.Location = new System.Drawing.Point(12, 676);
+            this.comboBoxGrade.Location = new System.Drawing.Point(22, 1352);
+            this.comboBoxGrade.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBoxGrade.Name = "comboBoxGrade";
-            this.comboBoxGrade.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxGrade.Size = new System.Drawing.Size(221, 32);
             this.comboBoxGrade.TabIndex = 5;
             this.comboBoxGrade.SelectedIndexChanged += new System.EventHandler(this.comboBoxGrade_SelectedIndexChanged);
             // 
             // comboBoxSubject
             // 
             this.comboBoxSubject.FormattingEnabled = true;
-            this.comboBoxSubject.Location = new System.Drawing.Point(199, 676);
+            this.comboBoxSubject.Location = new System.Drawing.Point(370, 1352);
+            this.comboBoxSubject.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBoxSubject.Name = "comboBoxSubject";
-            this.comboBoxSubject.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxSubject.Size = new System.Drawing.Size(221, 32);
             this.comboBoxSubject.TabIndex = 7;
             this.comboBoxSubject.SelectedIndexChanged += new System.EventHandler(this.comboBoxSubject_SelectedIndexChanged);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 715);
+            this.ClientSize = new System.Drawing.Size(1194, 1430);
             this.Controls.Add(this.comboBoxSubject);
             this.Controls.Add(this.comboBoxGrade);
             this.Controls.Add(this.PlusButton);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.TimeTable);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.TimeTable)).EndInit();

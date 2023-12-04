@@ -73,10 +73,7 @@ namespace 윈도우프로그래밍_프로젝트
 
         private void TimeTable_CellClick(object sender, DataGridViewCellEventArgs e) // 셀 눌렀을 떄
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) //행렬이 0보다 큰 걸 눌렀을 떄(제대로 된 거 눌렀을 떄 만 실행한다는 거임)
-            {
-                selectedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex]; //선택된 셀을 이걸로 바꿈
-            }
+
         }
 
         private void PlusButton_Click(object sender, EventArgs e) //추가 버튼 클릭했을떄
@@ -135,6 +132,23 @@ namespace 윈도우프로그래밍_프로젝트
         {
             UpdateSubjectComboBox();
 
+        }
+
+        private void TimeTable_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell clickedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                // 1행과 1열인 경우 (인덱스가 0일 때) 변경되지 않도록 경고 메시지 표시
+                if (e.RowIndex == 0 || e.ColumnIndex == 0)
+                {
+                    MessageBox.Show("이 셀은 변경할 수 없습니다.");
+                    return;
+                }
+
+            
+            }
         }
     }
 }
