@@ -79,9 +79,9 @@
             "IT융합기술 및 이해",
             "파이썬 프로그래밍",
             "고급 프로그래밍 언어 및 실습"});
-            this.firstGrade.Location = new System.Drawing.Point(141, 670);
+            this.firstGrade.Location = new System.Drawing.Point(130, 669);
             this.firstGrade.Name = "firstGrade";
-            this.firstGrade.Size = new System.Drawing.Size(95, 20);
+            this.firstGrade.Size = new System.Drawing.Size(202, 20);
             this.firstGrade.TabIndex = 6;
             this.firstGrade.Visible = false;
             this.firstGrade.SelectedIndexChanged += new System.EventHandler(this.firstGrade_SelectedIndexChanged);
@@ -96,11 +96,12 @@
             "산학 옴니버스 강좌",
             "지능 정보 시스템",
             "빅데이터 시스템"});
-            this.fourthGrade.Location = new System.Drawing.Point(141, 671);
+            this.fourthGrade.Location = new System.Drawing.Point(130, 669);
             this.fourthGrade.Name = "fourthGrade";
-            this.fourthGrade.Size = new System.Drawing.Size(95, 20);
+            this.fourthGrade.Size = new System.Drawing.Size(202, 20);
             this.fourthGrade.TabIndex = 7;
             this.fourthGrade.Visible = false;
+            this.fourthGrade.SelectedIndexChanged += new System.EventHandler(this.fourthGrade_SelectedIndexChanged);
             // 
             // secondGrade
             // 
@@ -118,9 +119,9 @@
             "오픈소스 SW응용",
             "통계분석의 이해",
             "윈도우 프로그래밍"});
-            this.secondGrade.Location = new System.Drawing.Point(141, 671);
+            this.secondGrade.Location = new System.Drawing.Point(130, 670);
             this.secondGrade.Name = "secondGrade";
-            this.secondGrade.Size = new System.Drawing.Size(95, 20);
+            this.secondGrade.Size = new System.Drawing.Size(202, 20);
             this.secondGrade.TabIndex = 8;
             this.secondGrade.Visible = false;
             this.secondGrade.SelectedIndexChanged += new System.EventHandler(this.secondGrade_SelectedIndexChanged);
@@ -129,14 +130,23 @@
             // 
             this.thirdGrade.FormattingEnabled = true;
             this.thirdGrade.Items.AddRange(new object[] {
-            "3학년과목1",
-            "빵상",
-            "데이터베이스"});
-            this.thirdGrade.Location = new System.Drawing.Point(141, 671);
+            "안전 및 조직관례사례연구",
+            "데이터베이스",
+            "정보보안",
+            "기업연계 프로젝트",
+            "빅데이터",
+            "스마트 디바이스",
+            "컴퓨터 네트워크",
+            "데이터베이스",
+            "영상처리",
+            "정보보안",
+            "스마트 디바이스"});
+            this.thirdGrade.Location = new System.Drawing.Point(130, 670);
             this.thirdGrade.Name = "thirdGrade";
-            this.thirdGrade.Size = new System.Drawing.Size(95, 20);
+            this.thirdGrade.Size = new System.Drawing.Size(202, 20);
             this.thirdGrade.TabIndex = 9;
             this.thirdGrade.Visible = false;
+            this.thirdGrade.SelectedIndexChanged += new System.EventHandler(this.thirdGrade_SelectedIndexChanged);
             // 
             // color
             // 

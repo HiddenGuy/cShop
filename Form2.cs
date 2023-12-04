@@ -22,6 +22,9 @@ namespace 윈도우프로그래밍_프로젝트
 
         private void InitializeTimetable()
         {
+            Random random = new Random();
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            TimeTable.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             TimeTable.RowTemplate.Height = 20;
             
             // 초기설정 datagridview <- 이게 표임
@@ -120,68 +123,94 @@ namespace 윈도우프로그래밍_프로젝트
         private void secondGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
             string inputItem = secondGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
+            Random random = new Random();
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            if (TimeTable.SelectedCells.Count > 0)
             {
+                foreach (DataGridViewCell cell in TimeTable.SelectedCells)
+                {
+                    // 1행과 1열은 변경할 수 없도록 제한
+                    if (cell.RowIndex != 0 && cell.ColumnIndex != 0)
+                    {
 
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
+                        cell.Value = inputItem;
+                        cell.Style.BackColor = randomColor;// 선택된 모든 셀에 값을 채움
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
+                MessageBox.Show("셀을 먼저 선택하세요."); // 선택된 셀이 없는 경우 메시지 표시
             }
         }
 
         private void firstGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
             string inputItem = firstGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
+            Random random = new Random();
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            if (TimeTable.SelectedCells.Count > 0)
             {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
+                foreach (DataGridViewCell cell in TimeTable.SelectedCells)
+                {
+                    // 1행과 1열은 변경할 수 없도록 제한
+                    if (cell.RowIndex != 0 && cell.ColumnIndex != 0)
+                    {
+                        cell.Value = inputItem; // 선택된 모든 셀에 값을 채움
+                        cell.Style.BackColor = randomColor;
+                        
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
+                MessageBox.Show("셀을 먼저 선택하세요."); // 선택된 셀이 없는 경우 메시지 표시
             }
         }
 
         private void thirdGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
             string inputItem = thirdGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
+            Random random = new Random();
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            if (TimeTable.SelectedCells.Count > 0)
             {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
+                foreach (DataGridViewCell cell in TimeTable.SelectedCells)
+                {
+                    // 1행과 1열은 변경할 수 없도록 제한
+                    if (cell.RowIndex != 0 && cell.ColumnIndex != 0)
+                    {
+                        cell.Value = inputItem;
+                        cell.Style.BackColor = randomColor;// 선택된 모든 셀에 값을 채움
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
+                MessageBox.Show("셀을 먼저 선택하세요."); // 선택된 셀이 없는 경우 메시지 표시
             }
         }
 
         private void fourthGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
             string inputItem = fourthGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
+            Random random = new Random();
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            if (TimeTable.SelectedCells.Count > 0)
             {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
+                foreach (DataGridViewCell cell in TimeTable.SelectedCells)
+                {
+                    // 1행과 1열은 변경할 수 없도록 제한
+                    if (cell.RowIndex != 0 && cell.ColumnIndex != 0)
+                    {
+                        cell.Value = inputItem;
+                        cell.Style.BackColor = randomColor;// 선택된 모든 셀에 값을 채움
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
+                MessageBox.Show("셀을 먼저 선택하세요."); // 선택된 셀이 없는 경우 메시지 표시
             }
         }
        /*
