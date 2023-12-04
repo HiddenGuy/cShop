@@ -12,18 +12,29 @@ namespace 윈도우프로그래밍_프로젝트
 {
     public partial class Form2 : Form
     {
+
+        private Dictionary<string, List<string>> gradeSubjectDictionary = new Dictionary<string, List<string>>();
+
         DataGridViewCell selectedCell; //datagridviewcell <- 이게 표임
         public Form2()
         {
             InitializeComponent();
             InitializeTimetable(); //시작할 때 같이 실행
 
+            // 1학년, 2학년, 3학년, 4학년에 대한 과목 목록을 딕셔너리에 추가
+            gradeSubjectDictionary.Add("1학년", new List<string> { "국어", "수학", "영어" });
+            gradeSubjectDictionary.Add("2학년", new List<string> { "과학", "역사", "미술" });
+            gradeSubjectDictionary.Add("3학년", new List<string> { "체육", "음악", "기술" });
+            gradeSubjectDictionary.Add("4학년", new List<string> { "한국사", "도덕", "사회" });
+
+            comboBoxGrade.Items.AddRange(new string[] { "1학년", "2학년", "3학년", "4학년" });
+
         }
 
         private void InitializeTimetable()
         {
             TimeTable.RowTemplate.Height = 20;
-            
+
             // 초기설정 datagridview <- 이게 표임
             TimeTable.ColumnCount = 6; // 교시 열(0번 열은 교시 사용)
             TimeTable.Rows.Add("교시", "월요일", "화요일", "수요일", "목요일", "금요일");
@@ -53,13 +64,11 @@ namespace 윈도우프로그래밍_프로젝트
                 }
             }
 
-            
-
             // DataGridView 셀 클릭 이벤트 추가
             TimeTable.CellClick += TimeTable_CellClick; //cellclick 이벤트에 함수 추가
 
             // 변경 버튼 클릭 이벤트 추가
-            
+            PlusButton.Click += PlusButton_Click; //마찬가지 
         }
 
         private void TimeTable_CellClick(object sender, DataGridViewCellEventArgs e) // 셀 눌렀을 떄
@@ -70,164 +79,62 @@ namespace 윈도우프로그래밍_프로젝트
             }
         }
 
-       
+        private void PlusButton_Click(object sender, EventArgs e) //추가 버튼 클릭했을떄
+        {
+            if (selectedCell != null) //셀 선택 됐을떄만 실행
+            {
+                string newContent = TextBox.Text.Trim(); // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
+
+                // newcontent << textbox 내용
+                selectedCell.Value = newContent; //이거 값 newContent로 채움
+            }
+            else
+            {
+                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
+            }
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void grade_SelectedIndexChanged(object sender, EventArgs e)
+        private void TextBox_Click(object sender, EventArgs e)
         {
-            string selectedItem = grade.SelectedItem.ToString();
-            if (selectedItem == "first")
-            {
-                firstGrade.Visible = true;
-            }
-            else
-            {
-                firstGrade.Visible = false;
-            }
-
-            if (selectedItem == "second")
-            {
-                secondGrade.Visible = true;
-            }
-            else
-            {
-                secondGrade.Visible = false;
-            }
-
-            if (selectedItem == "third")
-            {
-                thirdGrade.Visible = true;
-            }
-            else
-            {
-                thirdGrade.Visible = false;
-            }
-            if (selectedItem == "fourth")
-            {
-                fourthGrade.Visible = true;
-            }
-            else
-            {
-                fourthGrade.Visible = false;
-            }
-
+            TextBox.Text = string.Empty; //텍스트박스에 입력 누르면 바로 지워지게
         }
 
-        private void secondGrade_SelectedIndexChanged(object sender, EventArgs e)
+        private void UpdateSubjectComboBox()
         {
-            string inputItem = secondGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
+            if (comboBoxGrade.SelectedItem != null)
             {
+                string selectedGrade = comboBoxGrade.SelectedItem.ToString();
 
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
-            }
-            else
-            {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
-            }
-        }
-
-        private void firstGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string inputItem = firstGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
-            {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
-            }
-            else
-            {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
-            }
-        }
-
-        private void thirdGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string inputItem = thirdGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
-            {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
-            }
-            else
-            {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
-            }
-        }
-
-        private void fourthGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string inputItem = fourthGrade.SelectedItem.ToString();
-            if (selectedCell != null) //셀 선택 됐을떄만 실행
-            {
-
-                string newContent = inputItem; // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
-
-                // newcontent << textbox 내용
-                selectedCell.Value = newContent; //이거 값 newContent로 채움
-            }
-            else
-            {
-                MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
-            }
-        }
-
-        private void TimeTable_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                DataGridViewCell clickedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex];
-
-                // 1행과 1열인 경우 (인덱스가 0일 때) 변경되지 않도록 경고 메시지 표시
-                if (e.RowIndex == 0 || e.ColumnIndex == 0)
+                // 딕셔너리에서 선택한 학년에 해당하는 과목 목록을 가져와서 두 번째 콤보박스에 설정
+                if (gradeSubjectDictionary.ContainsKey(selectedGrade))
                 {
-                    MessageBox.Show("이 셀은 변경할 수 없습니다.");
-                    return;
-                }
-
-                // 이하 선택된 셀에 내용을 변경하는 코드
-                string inputItem = secondGrade.SelectedItem.ToString();
-                if (clickedCell != null)
-                {
-                    string newContent = inputItem;
-                    clickedCell.Value = newContent;
-                }
-                else
-                {
-                    MessageBox.Show("셀을 먼저 선택하세요.");
+                    comboBoxSubject.Items.Clear();
+                    comboBoxSubject.Items.AddRange(gradeSubjectDictionary[selectedGrade].ToArray());
                 }
             }
         }
-        private void color_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void comboBoxSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedColor = color.SelectedItem.ToString();
-            if (selectedColor == "lightBlue")
-            {
-                TimeTable.DefaultCellStyle.BackColor = Color.LightBlue;
-            }
-            if (selectedColor == "pink")
-                TimeTable.DefaultCellStyle.BackColor = Color.Pink;
-            if (selectedColor == "yellow")
-                TimeTable.DefaultCellStyle.BackColor = Color.LightGoldenrodYellow;
-            if (selectedColor == "blue")
-                TimeTable.DefaultCellStyle.BackColor = Color.Blue;
-            if (selectedColor == "white")
-                TimeTable.DefaultCellStyle.BackColor = Color.White;
-            if (selectedColor == "gray")
-                TimeTable.DefaultCellStyle.BackColor = Color.Gray;
+            // 첫 번째 콤보박스의 선택에 따라 두 번째 콤보박스의 항목을 변경
+            string selectedGrade = comboBoxGrade.SelectedItem.ToString();
+
+            // 딕셔너리에서 선택한 학년에 해당하는 과목 목록을 가져와서 두 번째 콤보박스에 설정
+            comboBoxSubject.Items.Clear();
+            comboBoxSubject.Items.AddRange(gradeSubjectDictionary[selectedGrade].ToArray());
+            
+
+        }
+
+        private void comboBoxGrade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateSubjectComboBox();
+
         }
     }
 }
