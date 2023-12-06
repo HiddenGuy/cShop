@@ -33,9 +33,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +55,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 172);
+            this.label2.Location = new System.Drawing.Point(51, 172);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 28);
@@ -85,7 +87,6 @@
             this.txtUsername.TabIndex = 3;
             this.txtUsername.Text = "아이디를 입력해 주세요.";
             this.txtUsername.Click += new System.EventHandler(this.textBox1_Click);
-            this.txtUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtUsername.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // txtPassword
@@ -99,33 +100,13 @@
             this.txtPassword.TabIndex = 4;
             this.txtPassword.Text = "비밀번호를 입력해 주세요.";
             this.txtPassword.Click += new System.EventHandler(this.textBox2_Click);
-            this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtPassword.Leave += new System.EventHandler(this.textBox2_Leave);
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.linkLabel4.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.linkLabel4.Font = new System.Drawing.Font("굴림", 17F);
-            this.linkLabel4.LinkArea = new System.Windows.Forms.LinkArea(0, 19);
-            this.linkLabel4.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabel4.Location = new System.Drawing.Point(83, 320);
-            this.linkLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(187, 23);
-            this.linkLabel4.TabIndex = 11;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Sign in with Google";
-            this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel4.Visible = false;
-            this.linkLabel4.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(136, 266);
+            this.button1.Location = new System.Drawing.Point(140, 266);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 30);
@@ -136,26 +117,40 @@
             // 
             // linkLabel3
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(248, 360);
+            this.linkLabel3.Location = new System.Drawing.Point(0, 0);
             this.linkLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(53, 12);
-            this.linkLabel3.TabIndex = 13;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "홈페이지";
-            this.linkLabel3.Click += new System.EventHandler(this.linkLabel3_Click);
+            this.linkLabel3.Size = new System.Drawing.Size(54, 12);
+            this.linkLabel3.TabIndex = 1;
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.Location = new System.Drawing.Point(0, 0);
+            this.linkLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(54, 12);
+            this.linkLabel5.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::윈도우프로그래밍_프로젝트.Properties.Resources._4663997;
+            this.pictureBox1.Location = new System.Drawing.Point(134, 53);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(376, 396);
+            this.ClientSize = new System.Drawing.Size(376, 312);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label3);
@@ -164,7 +159,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,9 +172,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

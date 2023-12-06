@@ -17,19 +17,9 @@ namespace 윈도우프로그래밍_프로젝트
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "아이디를 입력해 주세요.") txtUsername.Text = "";
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
@@ -55,11 +45,6 @@ namespace 윈도우프로그래밍_프로젝트
             }
         }
 
-        private void linkLabel3_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://www.wku.ac.kr");
-        }
-
         private void Button1_click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -83,14 +68,5 @@ namespace 윈도우프로그래밍_프로젝트
             this.Hide();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        
-
-
-        
-        
     }
 }
